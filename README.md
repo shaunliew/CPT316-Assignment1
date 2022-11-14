@@ -12,4 +12,4 @@ Radix Sort in Python (LSD)
 4. install the libaries by using the command below
     - `~ pip install -r requirements.txt`
 5. If you want to deactivate the virtual environment, run the command below
-    -`~ deactivate`
+    - `~ deactivate`

@@ -41,7 +41,6 @@ NumberOfWords = []
 for i in range(2,5803,100):
     if i > 5758:
         i = 5758
-    print(i)
     sub_array = txt_array[0:i]
     start_time = 0
     end_time = 0
@@ -61,6 +60,8 @@ plt.xlabel('Number Of Words')
 plt.title('Radix Sort for String in Python')
 #plt.show()
 plt.savefig('radix_sorted_string_graph.png')
+print("The graph is generated. Please check the file radix_sorted_string_graph.png\n")
+
 start_time = 0
 end_time = 0
 sorted_txt_array, start_time,end_time =  radix_sort_string(txt_array,start_time,end_time)
@@ -68,8 +69,8 @@ sorted_txt_array, start_time,end_time =  radix_sort_string(txt_array,start_time,
 # Calculate total execution time and display it
 #print("This program took %.f milliseconds to execute " % ((end_time - start_time) * 1000))
 time_needed = (end_time-start_time)*1000.0
-print("This program took {} milliseconds to sort the texts ".format(time_needed))
-print("Memory allocated in %.2f MB " % (psutil.Process().memory_info().rss / (1024 * 1024)))
+print("This program took %.4f milliseconds to sort the texts "%(time_needed))
+print("Memory allocated for Radix Sort is %.4f MB " % (psutil.Process().memory_info().rss / (1024 * 1024)))
 # Save the sorted array to a file
 file = open("sorted_string.txt", "w")  # write mode
 for i in sorted_txt_array:
